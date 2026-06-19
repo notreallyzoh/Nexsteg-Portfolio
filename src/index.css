@@ -143,35 +143,41 @@ body::after {
   pointer-events: none;
   opacity: 0;
   border-radius: 50%;
+  /* difference keeps the cursor visible on ANY background (dark, light, image) */
+  mix-blend-mode: difference;
 }
 .cursor__dot {
   width: 7px;
   height: 7px;
   margin: -3.5px 0 0 -3.5px;
-  background: var(--volt-bright);
+  background: #fff;
 }
 .cursor__ring {
   width: 40px;
   height: 40px;
   margin: -20px 0 0 -20px;
-  border: 1px solid var(--bone);
+  border: 1px solid #fff;
   transition: scale 0.3s var(--e-expo), background-color 0.3s, border-color 0.3s;
 }
 .cursor__ring.is-hover {
   scale: 1.7;
-  background: var(--volt-glow);
+  background: rgba(255, 255, 255, 0.4);
   border-color: transparent;
 }
 .cursor__ring.is-down {
   scale: 0.85;
 }
+/* Hide the native cursor only where the custom one is the experience… */
 body.has-cursor,
 body.has-cursor a,
 body.has-cursor button,
-body.has-cursor .magnetic,
+body.has-cursor .magnetic {
+  cursor: none;
+}
+/* …but keep a real text caret in form fields so typing is obvious. */
 body.has-cursor input,
 body.has-cursor textarea {
-  cursor: none;
+  cursor: text;
 }
 
 /* ---------------------------------------------------------- scroll progress */
@@ -1000,13 +1006,13 @@ body.has-cursor textarea {
 }
 .plan__head {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.5rem;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 .plan__term {
   font-size: var(--fs-h3);
   font-weight: 600;
+  white-space: nowrap;
 }
 .plan__note {
   font-size: var(--fs-xs);

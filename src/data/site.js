@@ -140,7 +140,7 @@ export const plans = [
   {
     term: '12 Months',
     price: 120,
-    note: 'Best value',
+    note: 'Go all in',
     perks: ['Personalized workout plan', 'Weekly trainer session', '24/7 support'],
     featured: true,
   },

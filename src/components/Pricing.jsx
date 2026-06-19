@@ -27,8 +27,8 @@ export default function Pricing() {
             <article className={`plan reveal ${p.featured ? 'plan--featured' : ''}`} key={p.term}>
               {p.featured && <span className="plan__badge">Best value</span>}
               <div className="plan__head">
-                <h3 className="plan__term">{p.term}</h3>
                 <span className="plan__note">{p.note}</span>
+                <h3 className="plan__term">{p.term}</h3>
               </div>
               <div className="plan__price">
                 <span className="plan__amt">{p.price}</span>
