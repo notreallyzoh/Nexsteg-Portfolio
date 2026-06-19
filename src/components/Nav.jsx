@@ -91,7 +91,7 @@ export default function Nav({ intro }) {
     <>
       <header ref={root} className={`nav ${scrolled ? 'is-scrolled' : ''}`}>
         <button className="nav__logo" onClick={() => go('hero')} aria-label="NEXSTEG — home">
-          <span className="nav__word">NEXSTEG</span>
+          <img className="nav__logo-img" src="/img/logo-wordmark.webp" alt="NEXSTEG" width="158" height="26" />
         </button>
 
         <nav className="nav__links" aria-label="Primary">

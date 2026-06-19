@@ -10,6 +10,13 @@ export default function Footer() {
       <div className="container">
         <div className="footer__top">
           <div className="footer__lead">
+            <img
+              className="footer__logo"
+              src="/img/logo-lockup.webp"
+              alt="NEXSTEG Fit Hub"
+              width="240"
+              height="63"
+            />
             <p className="footer__eyebrow">
               <span className="dot" /> Mahboula, Kuwait
             </p>

@@ -476,6 +476,15 @@ body.has-cursor textarea {
   font-size: 1.4rem;
   letter-spacing: 0.05em;
 }
+.nav__logo-img {
+  display: block;
+  height: 24px;
+  width: auto;
+  transition: height 0.4s var(--e-expo);
+}
+.nav.is-scrolled .nav__logo-img {
+  height: 21px;
+}
 .nav__links {
   display: none;
   gap: 0.35rem;
@@ -1296,6 +1305,12 @@ body.has-cursor textarea {
   flex-direction: column;
   gap: 2.5rem;
   justify-content: space-between;
+}
+.footer__logo {
+  display: block;
+  height: 42px;
+  width: auto;
+  margin-bottom: 1.75rem;
 }
 .footer__eyebrow {
   display: inline-flex;
