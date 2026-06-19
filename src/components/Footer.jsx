@@ -1,4 +1,4 @@
-import { nav, site, credit } from '../data/site'
+import { nav, site } from '../data/site'
 import { scrollToSection } from '../lib/smoothScroll'
 import { wa } from '../lib/links'
 import Magnetic from './Magnetic.jsx'
@@ -46,12 +46,6 @@ export default function Footer() {
         <div className="footer__bottom">
           <span>
             © {new Date().getFullYear()} {site.name}. All rights reserved.
-          </span>
-          <span className="footer__credit">
-            Crafted &amp; developed by{' '}
-            <a href={credit.href} target="_blank" rel="noreferrer">
-              {credit.label}
-            </a>
           </span>
           <button className="to-top" onClick={() => scrollToSection('hero')}>
             Back to top <Icon name="arrowUpRight" size={14} />

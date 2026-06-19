@@ -186,7 +186,3 @@ export const testimonials = [
   },
 ]
 
-export const credit = {
-  label: 'Lagger Technologies',
-  href: 'https://lagger.in/',
-}

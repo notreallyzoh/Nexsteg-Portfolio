@@ -5,8 +5,6 @@ Built as a web-animation showcase: **React + Vite + GSAP + Lenis smooth scroll**
 choreographed page-load, custom cursor, magnetic buttons, scroll-velocity marquee,
 animated counters, and full `prefers-reduced-motion` support.
 
-> Crafted & developed by [Lagger Technologies](https://lagger.in/).
-
 ---
 
 ## Tech
