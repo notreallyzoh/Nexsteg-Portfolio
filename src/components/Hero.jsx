@@ -21,10 +21,9 @@ export default function Hero({ intro }) {
       // Hidden start state (kept until the intro plays — no flash, and
       // it stays graceful if JS never runs because there's no CSS hiding).
       gsap.set(q('.hero__title .char'), { yPercent: 115 })
-      gsap.set(
-        [q('.hero__eyebrow'), q('.hero__lead'), q('.hero__proof'), q('.hero__scroll'), q('.hero__sidebar')],
-        { autoAlpha: 0 }
-      )
+      gsap.set([q('.hero__eyebrow'), q('.hero__lead'), q('.hero__proof'), q('.hero__scroll')], {
+        autoAlpha: 0,
+      })
       gsap.set(q('.hero__cta > *'), { autoAlpha: 0, y: 26 })
       gsap.set(q('.hero__media'), { clipPath: 'inset(100% 0 0 0)' })
 
@@ -37,7 +36,6 @@ export default function Hero({ intro }) {
         .to(q('.hero__lead'), { autoAlpha: 1, duration: 0.8 }, 0.65)
         .to(q('.hero__cta > *'), { autoAlpha: 1, y: 0, stagger: 0.12, duration: 0.7 }, 0.8)
         .to(q('.hero__proof'), { autoAlpha: 1, duration: 0.8 }, 0.95)
-        .to(q('.hero__sidebar'), { autoAlpha: 1, duration: 0.8 }, 1.0)
         .to(q('.hero__scroll'), { autoAlpha: 1, duration: 0.6 }, 1.1)
 
       // Parallax drift on the figure.
@@ -108,8 +106,6 @@ export default function Hero({ intro }) {
 
         <div className="hero__media">
           <div className="hero__glow" aria-hidden="true" />
-          <span className="hero__tag hero__tag--top">Strength</span>
-          <span className="hero__tag hero__tag--bottom">Discipline</span>
           <img
             className="hero__img"
             src="/img/hero.webp"
@@ -118,11 +114,6 @@ export default function Hero({ intro }) {
             height="1100"
             fetchpriority="high"
           />
-        </div>
-
-        <div className="hero__sidebar" aria-hidden="true">
-          <span className="hero__sidebar-line" />
-          <span className="hero__sidebar-text">{site.tagline}</span>
         </div>
       </div>
 
