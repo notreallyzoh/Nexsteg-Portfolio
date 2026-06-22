@@ -5,6 +5,7 @@ import { useGSAP } from '@gsap/react'
 import { nav, site } from '../data/site'
 import { scrollToSection, lockScroll, unlockScroll } from '../lib/smoothScroll'
 import { wa } from '../lib/links'
+import { asset } from '../lib/asset'
 import Magnetic from './Magnetic.jsx'
 import Icon from './icons.jsx'
 
@@ -91,7 +92,7 @@ export default function Nav({ intro }) {
     <>
       <header ref={root} className={`nav ${scrolled ? 'is-scrolled' : ''}`}>
         <button className="nav__logo" onClick={() => go('hero')} aria-label="NEXSTEG — home">
-          <img className="nav__logo-img" src="/img/logo-wordmark.webp" alt="NEXSTEG" width="158" height="26" />
+          <img className="nav__logo-img" src={asset('/img/logo-wordmark.webp')} alt="NEXSTEG" width="158" height="26" />
         </button>
 
         <nav className="nav__links" aria-label="Primary">

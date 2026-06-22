@@ -1,4 +1,5 @@
 import { trainers } from '../data/site'
+import { asset } from '../lib/asset'
 
 export default function Trainers() {
   return (
@@ -22,7 +23,7 @@ export default function Trainers() {
             <article className="coach reveal" key={t.name}>
               <div className="coach__media">
                 <span className="coach__index">{String(i + 1).padStart(2, '0')}</span>
-                <img src={t.img} alt={t.name} loading="lazy" />
+                <img src={asset(t.img)} alt={t.name} loading="lazy" />
               </div>
               <div className="coach__info">
                 <h3 className="coach__name">{t.name}</h3>

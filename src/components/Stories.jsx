@@ -1,4 +1,5 @@
 import { transformation, testimonials } from '../data/site'
+import { asset } from '../lib/asset'
 import Icon from './icons.jsx'
 
 export default function Stories() {
@@ -16,7 +17,7 @@ export default function Stories() {
 
         <article className="transform reveal">
           <div className="transform__media">
-            <img src={transformation.img} alt={`${transformation.name} transformation`} loading="lazy" />
+            <img src={asset(transformation.img)} alt={`${transformation.name} transformation`} loading="lazy" />
             <span className="transform__result">{transformation.result}</span>
           </div>
           <div className="transform__body">
@@ -56,7 +57,7 @@ export default function Stories() {
               </div>
               <blockquote>“{t.quote}”</blockquote>
               <figcaption>
-                <img src={t.img} alt="" width="44" height="44" loading="lazy" />
+                <img src={asset(t.img)} alt="" width="44" height="44" loading="lazy" />
                 <span>{t.name}</span>
               </figcaption>
             </figure>

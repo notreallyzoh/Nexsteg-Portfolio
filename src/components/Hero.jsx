@@ -7,6 +7,7 @@ import Magnetic from './Magnetic.jsx'
 import Icon from './icons.jsx'
 import { site, testimonials } from '../data/site'
 import { wa } from '../lib/links'
+import { asset } from '../lib/asset'
 import { scrollToSection } from '../lib/smoothScroll'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -94,7 +95,7 @@ export default function Hero({ intro }) {
           <div className="hero__proof">
             <div className="hero__avatars">
               {testimonials.map((t) => (
-                <img key={t.name} src={t.img} alt="" width="40" height="40" loading="lazy" />
+                <img key={t.name} src={asset(t.img)} alt="" width="40" height="40" loading="lazy" />
               ))}
             </div>
             <p>
@@ -108,7 +109,7 @@ export default function Hero({ intro }) {
           <div className="hero__glow" aria-hidden="true" />
           <img
             className="hero__img"
-            src="/img/hero.webp"
+            src={asset('/img/hero.webp')}
             alt="NEXSTEG athlete mid-session"
             width="900"
             height="1100"

@@ -1,6 +1,7 @@
 import { nav, site } from '../data/site'
 import { scrollToSection } from '../lib/smoothScroll'
 import { wa } from '../lib/links'
+import { asset } from '../lib/asset'
 import Magnetic from './Magnetic.jsx'
 import Icon from './icons.jsx'
 
@@ -12,7 +13,7 @@ export default function Footer() {
           <div className="footer__lead">
             <img
               className="footer__logo"
-              src="/img/logo-lockup.webp"
+              src={asset('/img/logo-lockup.webp')}
               alt="NEXSTEG Fit Hub"
               width="240"
               height="63"
