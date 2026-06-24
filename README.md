@@ -51,9 +51,8 @@ npm run images
 
 These came straight from the original repo and should be verified:
 
-1. **WhatsApp number** — `WHATSAPP` in `src/data/site.js` is set to `919656778508`
-   (the number your old contact form used). Replace with the gym's real Kuwait
-   WhatsApp (digits only, country code first, no `+`) and update `whatsappDisplay`.
+1. **WhatsApp number** — set `WHATSAPP` in `src/data/site.js` to the gym's real Kuwait
+   WhatsApp (digits only, country code first, no `+`) and update `whatsappDisplay` to match.
 2. **Social links** — Instagram & Facebook are `#` placeholders in `site.socials`. Add real URLs.
 3. **Coach #3** — the photo `trainer3.png` is a man but is labelled "Sarah Mutairi".
    Either swap in Sarah's real photo or correct the name/role.
