@@ -8,10 +8,14 @@ dist
 dist-ssr
 *.local
 
-# source mockup (reference only — not part of the app)
+# source mockup / raw design archives (reference only — not part of the app)
 _source
 *.tar.gz
+*.zip
 mcpmarket-install.sh
+
+# Claude Code (local tooling — not shared)
+.claude/
 
 # editor / os
 .vscode/*
@@ -19,6 +23,8 @@ mcpmarket-install.sh
 .idea
 .DS_Store
 Thumbs.db
+._*
+__MACOSX
 
 # logs
 npm-debug.log*
